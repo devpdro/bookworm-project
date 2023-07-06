@@ -4,7 +4,7 @@ function NavBar() {
   return (
     <StyledNavBar>
       <div>
-        <h1>Bookworm</h1>
+        <h1>Book<span>worm</span></h1>
       </div>
       <ul>
         <li><a href="asda">Inicio</a></li>
