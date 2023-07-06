@@ -1,7 +1,11 @@
+import NavBar from "./components/layout/NavBar";
+import Layout from "./components/layout/Layout";
+
 function App() {
   return (
     <div>
-      <h1>Olá Mundo</h1>
+      <NavBar />
+      <Layout />
     </div>
   );
 }
