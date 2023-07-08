@@ -1,12 +1,20 @@
 import NavBar from "./components/layout/NavBar";
-import Layout from "./components/layout/Layout";
+import Header from "./components/layout/Header";
+import ContainerImg from "./components/layout/ContainerImg";
+import Container from "./components/layout/Container";
+import Books from "./components/Books";
 
 function App() {
   return (
-    <div>
-      <NavBar />
-      <Layout />
-    </div>
+    <>
+      <ContainerImg>
+        <NavBar />
+        <Header />
+      </ContainerImg>
+      <Container>
+        <Books />
+      </Container>
+    </>
   );
 }
 
