@@ -1,20 +1,19 @@
 import NavBar from "./components/layout/NavBar";
 import Header from "./components/layout/Header";
 import ContainerImg from "./components/layout/ContainerImg";
-import Container from "./components/layout/Container";
 import Books from "./components/Books";
+import Footer from "./components/layout/Footer";
 
 function App() {
   return (
-    <>
+    <main>
       <ContainerImg>
         <NavBar />
         <Header />
       </ContainerImg>
-      <Container>
-        <Books />
-      </Container>
-    </>
+      <Books />
+      <Footer />
+    </main>
   );
 }
 

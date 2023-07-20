@@ -4,13 +4,11 @@ nav {
   margin: 0 auto;
   justify-content: space-between;
   align-items: center;
-
   .title {
     font-size: 1.4rem;
     h1 {
       margin: 0.7rem 0 0.7rem 0;
       color: #fff;
-
       span {
         color: #fb995d;
       }
@@ -18,10 +16,8 @@ nav {
   }
   ul {
     display: flex;
-
     li {
       list-style: none;
-
       a {
         text-decoration: none;
         font-size: 2rem;

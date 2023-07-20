@@ -1,9 +1,10 @@
 section {
+  max-width: 1280px;
+  margin: 0 auto;
   h1 {
     color: red;
     margin: 2rem 0 2rem 0;
   }
-
   .container_box_books {
     display: flex;
     margin-right: 2rem;
