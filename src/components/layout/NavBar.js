@@ -1,10 +1,9 @@
-import { NavBarStyled } from "../../styles/NavBar.style";
-
+import styles from "../../styles/layout/Navbar.module.scss";
 
 function NavBar() {
   return (
-    <NavBarStyled>
-      <div>
+    <nav>
+      <div className={styles.title}>
         <h1>
           Book<span>worm</span>
         </h1>
@@ -23,7 +22,7 @@ function NavBar() {
           <a href="asdsa">Cadastrar-se</a>
         </li>
       </ul>
-    </NavBarStyled>
+    </nav>
   );
 }
 

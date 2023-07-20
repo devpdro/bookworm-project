@@ -1,4 +1,4 @@
-import styles from "../../styles/ContainerImg.module.css"
+import styles from "../../styles/layout/ContainerImg.module.scss";
 
 function Container(props) {
   return (

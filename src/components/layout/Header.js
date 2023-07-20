@@ -1,8 +1,8 @@
-import { HeaderStyled } from "../../styles/Header.style";
- 
+import styles from "../../styles/layout/Header.module.scss";
+
 function Header() {
   return (
-    <HeaderStyled>
+    <header className={styles.header}>
       <div>
         <h1>Best Books Available</h1>
         <p>Buy quality books at cheaper price</p>
@@ -10,9 +10,8 @@ function Header() {
       <div>
         <input type="text" name="" id="" />
       </div>
-    </HeaderStyled>
+    </header>
   );
 }
 
-export default Header
-
+export default Header;

@@ -2,8 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import reportWebVitals from "./reportWebVitals";
 import App from "./App";
-
-import { GlobalStyled } from "./GlobalStyled";
+import Global from "./Global.scss";
 
 import { ThemeProvider } from "styled-components";
 import { theme } from "./Theme";
@@ -12,8 +11,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
-      <GlobalStyled />
-      <App />
+      <App className={Global} />
     </ThemeProvider>
   </React.StrictMode>
 );

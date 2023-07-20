@@ -1,32 +1,28 @@
-import styled from "styled-components";
-
-export const NavBarStyled = styled.nav`
+nav {
   display: flex;
   max-width: 1280px;
   margin: 0 auto;
   justify-content: space-between;
   align-items: center;
 
-  & div {
+  .title {
     font-size: 1.4rem;
-
-    & h1 {
+    h1 {
       margin: 0.7rem 0 0.7rem 0;
       color: #fff;
 
-      & span {
-        color: ${({ theme }) => theme.colors.secondary};
+      span {
+        color: #fb995d;
       }
     }
   }
-
-  & ul {
+  ul {
     display: flex;
 
-    & li {
+    li {
       list-style: none;
 
-      & a {
+      a {
         text-decoration: none;
         font-size: 2rem;
         font-size: 1.3rem;
@@ -35,4 +31,4 @@ export const NavBarStyled = styled.nav`
       }
     }
   }
-`;
+}
