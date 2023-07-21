@@ -4,12 +4,27 @@ import reportWebVitals from "./reportWebVitals";
 import App from "./App";
 import Global from "./Global.scss";
 
-import { createBrowserRouter, RouterProvider } from "reactnpm install react-router@latest"
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+import Books from "./pages/Books";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+  },
+  {
+    path: "/Books",
+    element: <Books />,
+  },
+]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App className={Global} />
+    <RouterProvider router={router}>
+      <App className={Global} />
+    </RouterProvider>
   </React.StrictMode>
 );
 

@@ -1,5 +1,7 @@
 import styles from "../../styles/layout/Navbar.module.scss";
 
+import { Link } from "react-router-dom";
+
 function NavBar() {
   return (
     <nav>
@@ -13,7 +15,7 @@ function NavBar() {
           <a href="asda">Inicio</a>
         </li>
         <li>
-          <a href="asda">Livros</a>
+          <Link to="/books">Livros</Link>
         </li>
         <li>
           <a href="asdad">Conecte-se</a>
