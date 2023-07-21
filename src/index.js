@@ -4,15 +4,12 @@ import reportWebVitals from "./reportWebVitals";
 import App from "./App";
 import Global from "./Global.scss";
 
-import { ThemeProvider } from "styled-components";
-import { theme } from "./Theme";
+import { createBrowserRouter, RouterProvider } from "reactnpm install react-router@latest"
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <ThemeProvider theme={theme}>
-      <App className={Global} />
-    </ThemeProvider>
+    <App className={Global} />
   </React.StrictMode>
 );
 
