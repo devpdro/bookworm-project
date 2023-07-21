@@ -3,7 +3,6 @@ import Header from "./components/layout/Header";
 import ContainerImg from "./components/layout/ContainerImg";
 import Book from "./components/Book";
 import Footer from "./components/layout/Footer";
-import Books from "./pages/Books";
 
 function App() {
   return (
@@ -14,7 +13,6 @@ function App() {
       </ContainerImg>
       <Book />
       <Footer />
-      <Books />
     </main>
   );
 }

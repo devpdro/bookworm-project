@@ -5,23 +5,23 @@ import { Link } from "react-router-dom";
 function NavBar() {
   return (
     <nav>
-      <div className={styles.title}>
+      <div className={styles.title_box}>
         <h1>
           Book<span>worm</span>
         </h1>
       </div>
       <ul>
         <li>
-          <a href="asda">Inicio</a>
+          <a href="/">Inicio</a>
         </li>
         <li>
           <Link to="/books">Livros</Link>
         </li>
         <li>
-          <a href="asdad">Conecte-se</a>
+          <a href="/login">Conectar</a>
         </li>
         <li>
-          <a href="asdsa">Cadastrar-se</a>
+          <a href="/register">Cadastrar</a>
         </li>
       </ul>
     </nav>

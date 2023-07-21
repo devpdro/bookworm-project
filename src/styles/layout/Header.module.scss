@@ -1,7 +1,49 @@
+@import "../../variables.scss";
+@import "../../mixin.scss";
+
 header {
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
+  @include center_grid;
+  border-bottom: 1px solid #00000028;
   height: 800px;
+  .box_container {
+    .title_box {
+      color: $color-primary;
+      text-align: center;
+      margin-bottom: 1.4rem;
+      h1 {
+        font-size: 2.3rem;
+
+        span {
+          color: $color-secondary;
+        }
+      }
+      p {
+        font-size: 0.9rem;
+      }
+    }
+    .input_box {
+      @include center_grid;
+      position: relative;
+      label {
+        cursor: pointer;
+        position: absolute;
+        top: 8px;
+        right: 30px;
+        background-color: $color-secondary;
+        padding: 7px 15px;
+        color: $color-primary;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      }
+      input {
+        @include border_off;
+        background-color: $color-primary;
+        font-size: 1.1rem;
+        width: 30vw;
+        height: 7vh;
+        padding-left: 1.5rem;
+        color: $color-tertiary;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      }
+    }
+  }
 }

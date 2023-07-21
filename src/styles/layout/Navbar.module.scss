@@ -1,16 +1,16 @@
+@import "../../variables.scss";
+@import "../../mixin.scss";
+
 nav {
-  display: flex;
-  max-width: 1280px;
-  margin: 0 auto;
-  justify-content: space-between;
-  align-items: center;
-  .title {
+  @include container;
+  @include center_between;
+  .title_box {
     font-size: 1.4rem;
     h1 {
       margin: 0.7rem 0 0.7rem 0;
-      color: #fff;
+      color: $color-primary;
       span {
-        color: #fb995d;
+        color: $color-secondary;
       }
     }
   }
@@ -19,11 +19,14 @@ nav {
     li {
       list-style: none;
       a {
+        @include transition;
         text-decoration: none;
-        font-size: 2rem;
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         margin-left: 1rem;
-        color: #fff;
+        color: $color-primary;
+        &:hover {
+          color: $color-secondary;
+        }
       }
     }
   }

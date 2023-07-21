@@ -1,39 +1,42 @@
-footer {
-  background-color: #232123;
+@import "../../variables.scss";
+@import "../../mixin.scss";
 
+footer {
+  background-color: $color-quinary;
+  padding-bottom: 5rem;
   .container {
-    max-width: 1280px;
-    margin: 0 auto;
+    @include container;
     .title {
-      h2 {
-        padding-top: 4rem;
-        margin-top: 5rem;
-        margin-bottom: 4rem;
-        color: #fff;
-      }
+      padding-top: 3.7rem;
+      margin-bottom: 3.3rem;
+      color: $color-primary;
     }
     .box_input {
-      display: flex;
-      flex-direction: column;
       label {
-        color: #fff;
+        color: $color-primary;
         font-size: 1.2rem;
       }
       input {
+        @include border_off;
         display: block;
         width: 40%;
-        background-color: #fff;
-        color: #000;
+        background-color: $color-primary;
+        color: $color-tertiary;
         padding: 15px;
+        margin: 0.3rem 0 1.5rem 0;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        font-size: 1.1rem;
       }
     }
     .submit {
       input {
-        width: 10%;
-        margin: 2rem 0;
-        color: #fff;
+        @include border_off;
+        cursor: pointer;
+        color: $color-primary;
         background-color: #fb995d;
-        padding: 15px;
+        padding: 0.7rem 1.8rem;
+        margin-top: 1.1rem;
+        font-size: 1.2rem;
       }
     }
   }
