@@ -1,8 +1,8 @@
-import styles from "../styles/Books.module.scss";
+import styles from "../styles/Book.module.scss";
 
 import Image from "../assets/books-images/jungle-book.webp";
 
-function Books() {
+function Book() {
   return (
     <section>
       <h1>Here are some books thaht you might like</h1>
@@ -61,4 +61,4 @@ function Books() {
   );
 }
 
-export default Books;
+export default Book;

@@ -1,0 +1,13 @@
+header {
+  .title_box {
+  }
+  .container_box_books {
+    display: flex;
+    margin-right: 2rem;
+    .books_box {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
