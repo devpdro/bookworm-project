@@ -6,6 +6,7 @@ footer {
   padding-bottom: 5rem;
   .container {
     @include container;
+    margin-top: 10rem;
     .title {
       padding-top: 3.7rem;
       margin-bottom: 3.3rem;

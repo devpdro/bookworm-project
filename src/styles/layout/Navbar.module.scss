@@ -2,30 +2,33 @@
 @import "../../mixin.scss";
 
 nav {
-  @include container;
-  @include center_between;
-  .title_box {
-    font-size: 1.4rem;
-    h1 {
-      margin: 0.7rem 0 0.7rem 0;
-      color: $color-primary;
-      span {
-        color: $color-secondary;
+  background-color: rgba(35, 33, 35, 0.308);
+  .container {
+    @include container;
+    @include center_between;
+    .title_box {
+      font-size: 1.4rem;
+      h1 {
+        margin: 0.7rem 0 0.7rem 0;
+        color: $color-primary;
+        span {
+          color: $color-secondary;
+        }
       }
     }
-  }
-  ul {
-    display: flex;
-    li {
-      list-style: none;
-      a {
-        @include transition;
-        text-decoration: none;
-        font-size: 1.2rem;
-        margin-left: 1rem;
-        color: $color-primary;
-        &:hover {
-          color: $color-secondary;
+    ul {
+      display: flex;
+      li {
+        list-style: none;
+        a {
+          @include transition;
+          text-decoration: none;
+          font-size: 1.2rem;
+          margin-left: 1rem;
+          color: $color-primary;
+          &:hover {
+            color: $color-secondary;
+          }
         }
       }
     }

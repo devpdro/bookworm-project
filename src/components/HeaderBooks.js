@@ -1,66 +1,72 @@
 import styles from "../styles/HeaderBooks.module.scss";
 
-import Image from "../assets/books-images/jungle-book.webp";
+import Image from "../assets/books-images/atomic-habits.jpg";
 
 function HeaderBooks() {
   return (
     <header>
+      
       <div className={styles.title_box}>
-        <h1>Find the books that you want</h1>
-        <label htmlFor="search1">Search</label>
-        <input type="text" name="search" id="search1"></input>
+        <h1>
+          Encontre os <span>Livros</span> que deseja
+        </h1>
+        <div className={styles.input_box}>
+          <label htmlFor="book1">Search</label>
+          <input
+            type="text"
+            name="book"
+            id="book1"
+            placeholder="Pesquisar livros"
+          />
+        </div>
       </div>
-
       <div className={styles.container_box_books}>
         <div className={styles.books_box}>
-          <div>
-            <img src={Image} alt="" />
+          <div className={styles.img_box}>
+            <img src={Image} alt="Imagem do livro" />
           </div>
-          <div>
-            <h1>Garry Potter and the philsopoher Stone</h1>
+          <div className={styles.text_box}>
+            <h2>Garry Potter and the philsopoher Stone</h2>
             <p>J.kRowling</p>
             <h4>Preço</h4>
-          </div>
-          <div>
-            <input type="submit" value="" />
+            <input type="submit" value="Adicionar ao carrinho" />
           </div>
         </div>
         <div className={styles.books_box}>
-          <div>
-            <img src={Image} alt="" />
+          <div className={styles.img_box}>
+            <img src={Image} alt="Imagem do livro" />
           </div>
-          <div>
-            <h1>Garry Potter and the philsopoher Stone</h1>
+          <div className={styles.text_box}>
+            <h2>Garry Potter and the philsopoher Stone</h2>
             <p>J.kRowling</p>
             <h4>Preço</h4>
-          </div>
-          <div>
-            <input type="submit" value="" />
+            <input type="submit" value="Adicionar ao carrinho" />
           </div>
         </div>
         <div className={styles.books_box}>
-          <div>
-            <img src={Image} alt="" />
+          <div className={styles.img_box}>
+            <img src={Image} alt="Imagem do livro" />
           </div>
-          <div>
-            <h1>Garry Potter and the philsopoher Stone</h1>
+          <div className={styles.text_box}>
+            <h2>Garry Potter and the philsopoher Stone</h2>
             <p>J.kRowling</p>
             <h4>Preço</h4>
-          </div>
-          <div>
-            <input type="submit" value="" />
+            <input type="submit" value="Adicionar ao carrinho" />
           </div>
         </div>
         <div className={styles.books_box}>
-          <img src={Image} alt="" />
-          <div>
-            <h1>Garry Potter and the philsopoher Stone</h1>
+          <div className={styles.img_box}>
+            <img src={Image} alt="Imagem do livro" />
+          </div>
+          <div className={styles.text_box}>
+            <h2>Garry Potter and the philsopoher Stone</h2>
             <p>J.kRowling</p>
             <h4>Preço</h4>
+            <input type="submit" value="Adicionar ao carrinho" />
           </div>
-          <input type="submit" value="Comprar" />
         </div>
       </div>
+   
     </header>
   );
 }
