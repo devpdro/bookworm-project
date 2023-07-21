@@ -7,22 +7,24 @@ function NavBar() {
     <nav>
       <div className={styles.container}>
         <div className={styles.title_box}>
-          <h1>
-            Book<span>worm</span>
-          </h1>
+          <Link to="/">
+            <h1>
+              Book<span>worm</span>
+            </h1>
+          </Link>
         </div>
         <ul>
           <li>
-            <a href="/">Inicio</a>
+            <Link to="/">Inicio</Link>
           </li>
           <li>
             <Link to="/books">Livros</Link>
           </li>
           <li>
-            <a href="/login">Conectar</a>
+            <Link to="/login">Conectar</Link>
           </li>
           <li>
-            <a href="/register">Cadastrar</a>
+            <Link to="/register">Cadastrar</Link>
           </li>
         </ul>
       </div>

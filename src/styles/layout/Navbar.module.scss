@@ -8,11 +8,14 @@ nav {
     @include center_between;
     .title_box {
       font-size: 1.4rem;
-      h1 {
-        margin: 0.7rem 0 0.7rem 0;
-        color: $color-primary;
-        span {
-          color: $color-secondary;
+      a {
+        text-decoration: none;
+        h1 {
+          margin: 0.7rem 0 0.7rem 0;
+          color: $color-primary;
+          span {
+            color: $color-secondary;
+          }
         }
       }
     }

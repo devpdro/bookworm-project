@@ -5,7 +5,6 @@ import Image from "../assets/books-images/atomic-habits.jpg";
 function HeaderBooks() {
   return (
     <header>
-      
       <div className={styles.title_box}>
         <h1>
           Encontre os <span>Livros</span> que deseja

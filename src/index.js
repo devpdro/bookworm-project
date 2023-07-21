@@ -7,6 +7,8 @@ import Global from "./Global.scss";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import Books from "./pages/Books";
+import Login from "./pages/Login";
+import Register from "./pages/Register"
 
 const router = createBrowserRouter([
   {
@@ -16,6 +18,14 @@ const router = createBrowserRouter([
   {
     path: "/Books",
     element: <Books />,
+  },
+  {
+    path: "/Login",
+    element: <Login />,
+  },
+  {
+    path: "/Register",
+    element: <Register />,
   },
 ]);
 

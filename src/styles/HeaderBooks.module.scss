@@ -2,6 +2,7 @@
 @import "../mixin.scss";
 
 header {
+  @include container;
   .title_box {
     color: $color-tertiary;
     text-align: center;
