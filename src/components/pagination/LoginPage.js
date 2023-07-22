@@ -2,15 +2,36 @@ import styles from "../../styles/pagination/LoginPage.module.scss";
 
 import Image from "../../assets/auth-bg.jpg";
 
-import React, { useEffect } from "react";
+import React, { useState } from "react";
+
+import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
+import { auth } from "../../services/firebaseConfig";
 
 function LoginPage() {
-  useEffect(() => {
-    document.body.classList.add("no-scroll");
-    return () => {
-      document.body.classList.remove("no-scroll");
-    };
-  }, []);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [signInWithEmailAndPassword, user, loading, error] =
+    useSignInWithEmailAndPassword(auth);
+
+  if (error) {
+    return (
+      <div>
+        <p>Erro: {error.message}</p>
+      </div>
+    );
+  }
+
+  if (loading) {
+    return <p>Carregando...</p>;
+  }
+
+  if (user) {
+    return (
+      <div>
+        <p>Login efetuado: {user.user.email}</p>
+      </div>
+    );
+  }
 
   return (
     <div className={styles.container}>
@@ -33,6 +54,10 @@ function LoginPage() {
                 name="email"
                 id="email2"
                 placeholder="Digite seu email"
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                minLength={5}
+                maxLength={50}
               />
             </div>
             <div>
@@ -42,9 +67,18 @@ function LoginPage() {
                 name="password"
                 id="password1"
                 placeholder="Digite sua senha"
+                onChange={(e) => setPassword(e.target.value)}
+                required
+                minLength={3}
+                maxLength={25}
               />
             </div>
-            <input className={styles.login} type="submit" value="Fazer login" />
+            <input
+              onClick={() => signInWithEmailAndPassword(email, password)}
+              className={styles.login}
+              type="submit"
+              value="Fazer login"
+            />
           </form>
         </div>
       </div>

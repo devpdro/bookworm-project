@@ -4,10 +4,11 @@ import Image from "../../assets/auth-bg.jpg";
 
 import React, { useState } from "react";
 
-import { auth } from "../../services/firebaseConfig";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
+import { auth } from "../../services/firebaseConfig";
 
 function RegisterPage() {
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [createUserWithEmailAndPassword, user, loading, error] =
@@ -16,23 +17,23 @@ function RegisterPage() {
   if (error) {
     return (
       <div>
-        <p>Error: {error.message}</p>
+        <p>Erro: {error.message}</p>
       </div>
     );
   }
 
   if (loading) {
-    return <p>Loading...</p>;
+    return <p>Carregando...</p>;
   }
 
   if (user) {
     return (
       <div>
-        <p>Registered User: {user.user.email}</p>
+        <p>Cadastro feito: {user.user.email}</p>
       </div>
     );
   }
-  
+
   return (
     <div className={styles.container}>
       <div className={styles.img_box}>
@@ -50,6 +51,10 @@ function RegisterPage() {
                 name="username"
                 id="username1"
                 placeholder="Entre com seu nome de usuário"
+                onChange={(e) => setName(e.target.value)}
+                required
+                minLength={4}
+                maxLength={50}
               />
             </div>
             <div>
@@ -60,6 +65,9 @@ function RegisterPage() {
                 id="email2"
                 placeholder="Entre com seu email"
                 onChange={(e) => setEmail(e.target.value)}
+                required
+                minLength={5}
+                maxLength={50}
               />
             </div>
             <div>
@@ -70,13 +78,18 @@ function RegisterPage() {
                 id="password1"
                 placeholder="Entre com sua senha"
                 onChange={(e) => setPassword(e.target.value)}
+                required
+                minLength={3}
+                maxLength={25}
               />
             </div>
             <input
               className={styles.login}
               type="submit"
               value="Cadastrar conta"
-              onClick={() => createUserWithEmailAndPassword(email, password)}
+              onClick={() =>
+                createUserWithEmailAndPassword(email, password, name)
+              }
             />
           </form>
         </div>
