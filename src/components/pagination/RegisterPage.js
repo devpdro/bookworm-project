@@ -2,15 +2,37 @@ import styles from "../../styles/pagination/RegisterPage.module.scss";
 
 import Image from "../../assets/auth-bg.jpg";
 
-import React, { useEffect } from "react";
+import React, { useState } from "react";
+
+import { auth } from "../../services/firebaseConfig";
+import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 
 function RegisterPage() {
-  useEffect(() => {
-    document.body.classList.add("no-scroll");
-    return () => {
-      document.body.classList.remove("no-scroll");
-    };
-  }, []);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [createUserWithEmailAndPassword, user, loading, error] =
+    useCreateUserWithEmailAndPassword(auth);
+
+  if (error) {
+    return (
+      <div>
+        <p>Error: {error.message}</p>
+      </div>
+    );
+  }
+
+  if (loading) {
+    return <p>Loading...</p>;
+  }
+
+  if (user) {
+    return (
+      <div>
+        <p>Registered User: {user.user.email}</p>
+      </div>
+    );
+  }
+  
   return (
     <div className={styles.container}>
       <div className={styles.img_box}>
@@ -20,7 +42,7 @@ function RegisterPage() {
         <div className={styles.text_box}>
           <h2>Cadastrar-se</h2>
           <p>Crie uma nova conta com e-mail e senha</p>
-          <form action="">
+          <form>
             <div>
               <label htmlFor="username1">Nome de usuário:</label>
               <input
@@ -37,6 +59,7 @@ function RegisterPage() {
                 name="email"
                 id="email2"
                 placeholder="Entre com seu email"
+                onChange={(e) => setEmail(e.target.value)}
               />
             </div>
             <div>
@@ -46,12 +69,14 @@ function RegisterPage() {
                 name="password"
                 id="password1"
                 placeholder="Entre com sua senha"
+                onChange={(e) => setPassword(e.target.value)}
               />
             </div>
             <input
               className={styles.login}
               type="submit"
               value="Cadastrar conta"
+              onClick={() => createUserWithEmailAndPassword(email, password)}
             />
           </form>
         </div>
