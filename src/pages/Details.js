@@ -2,7 +2,7 @@ import React from "react";
 
 import NavBar from "../components/layout/NavBar";
 import DetailsPage from "../components/pagination/DetailsPage";
-import Footer from "../components/layout/Footer"
+import Footer from "../components/layout/Footer";
 
 function Details() {
   return (
@@ -11,7 +11,7 @@ function Details() {
       <DetailsPage />
       <Footer />
     </main>
-  )
+  );
 }
 
 export default Details;

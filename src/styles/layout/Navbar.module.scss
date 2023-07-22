@@ -1,6 +1,9 @@
 @import "../../variables.scss";
 @import "../../mixin.scss";
 
+.custom_button {
+  background-color: $color-quaternary;
+}
 nav {
   background-color: #00000031;
   .container {
@@ -23,14 +26,19 @@ nav {
       display: flex;
       li {
         list-style: none;
+        @include center_center;
         a {
           @include transition;
           text-decoration: none;
           font-size: 1.2rem;
-          margin-left: 1rem;
+          margin-left: 1.1rem;
           color: $color-primary;
           &:hover {
             color: $color-secondary;
+          }
+          .icon {
+            margin-top: 0.2rem;
+            font-size: 2rem;
           }
         }
       }

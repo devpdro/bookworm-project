@@ -1,10 +1,7 @@
 import styles from "../../styles/pagination/BookPage.module.scss";
 
-
-
 import { BookData } from "../../BookData";
 import { Link } from "react-router-dom";
-
 
 function BookPage() {
   const firstFifteenBooks = BookData.slice(0, 16);
@@ -36,7 +33,7 @@ function BookPage() {
               <p>{book.author_name}</p>
               <h4>Preço</h4>
               <Link to={`/Details/${book.id}`}>
-                <input type="submit" value="Adicionar ao carrinho" />
+                <input type="submit" value="Ver mais" />
               </Link>
             </div>
           </div>

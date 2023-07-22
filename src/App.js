@@ -6,6 +6,9 @@ import ContainerImg from "./components/layout/ContainerImg";
 import Book from "./components/Book";
 import Footer from "./components/layout/Footer";
 
+import { NotificationContainer } from "react-notifications";
+import "react-notifications/lib/notifications.css";
+
 function App() {
   return (
     <main>
@@ -15,6 +18,7 @@ function App() {
       </ContainerImg>
       <Book />
       <Footer />
+      <NotificationContainer />
     </main>
   );
 }

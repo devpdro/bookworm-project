@@ -19,7 +19,7 @@ function LoginPage() {
     useSignInWithEmailAndPassword(auth);
 
   function handleLogin(event) {
-    event.preventDefault(); 
+    event.preventDefault();
   }
 
   if (error) {
@@ -34,13 +34,11 @@ function LoginPage() {
   }
 
   if (loading) {
-    <p className={styles.loading}>
-      Carregando...
-    </p>;
+    <p className={styles.loading}>Carregando...</p>;
   }
 
   if (user) {
-    return navigate("/")
+    return navigate("/");
   }
 
   return (

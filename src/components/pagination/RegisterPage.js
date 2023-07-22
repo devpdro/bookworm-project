@@ -35,11 +35,7 @@ function RegisterPage() {
   }
 
   if (loading) {
-    return (
-      <p className={styles.loading}>
-        Carregando...
-      </p>
-    );
+    return <p className={styles.loading}>Carregando...</p>;
   }
 
   if (user) {

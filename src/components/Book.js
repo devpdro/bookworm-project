@@ -17,7 +17,7 @@ function Book() {
             <h2>Garry Potter and the philsopoher Stone</h2>
             <p>J.kRowling</p>
             <h4>Preço</h4>
-           <input type="submit" value="Adicionar ao carrinho" />
+            <input type="submit" value="Adicionar ao carrinho" />
           </div>
         </div>
         <div className={styles.books_box}>
