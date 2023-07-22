@@ -1,22 +1,19 @@
-@import "../variables.scss";
-@import "../mixin.scss";
+@import "../../variables.scss";
+@import "../../mixin.scss";
 
-header {
+.container {
   @include container;
+  margin-bottom: 1900px;
   .title_box {
-    color: $color-tertiary;
     text-align: center;
     margin-bottom: 1.4rem;
     h1 {
       font-size: 1.7rem;
-      margin: 4rem 0 0 0;
+      margin-top: 4rem;
       padding-bottom: 1.5rem;
       span {
         color: $color-secondary;
       }
-    }
-    p {
-      font-size: 0.9rem;
     }
     .input_box {
       @include center_grid;
@@ -44,36 +41,48 @@ header {
       }
     }
   }
-  .container_box_books {
+  .books_box_container {
     @include center_center;
+    flex-wrap: wrap;
     .books_box {
-      padding: 0 1rem;
-      margin: 0 1rem 5rem 1rem;
-      border: 1px solid #0000002a;
+      margin: 0 1.2rem 2.5rem 1.2rem;
+      width: 280px;
+      height: 530px;
+      border: 1px solid #0000002c;
       .img_box {
-        padding-top: 1rem;
-        text-align: center;
+        @include center_center;
+        padding: 0.8rem 0;
+        img {
+          width: 85%;
+          height: 300px;
+        }
       }
       .text_box {
+        padding: 0 1.4rem;
+        position: relative;
+        height: 175px;
         h2 {
-          font-size: 1.4rem;
-          margin-bottom: 0.2rem;
+          font-size: 1.2rem;
         }
         p {
-          margin-bottom: 0.4rem;
+          margin-bottom: 0.2rem;
         }
         h4 {
           color: $color-quaternary;
         }
-        input {
-          @include border_off;
-          cursor: pointer;
-          padding: 0.5rem 1.2rem;
-          margin: 3rem 0 1.2rem 0;
-          font-size: 1rem;
-          color: $color-primary;
-          width: 100%;
-          background-color: $color-quaternary;
+        a {
+          @include center_center;
+          input {
+            @include border_off;
+            cursor: pointer;
+            position: absolute;
+            bottom: 0;
+            padding: 0.5rem 1.2rem;
+            font-size: 1rem;
+            color: $color-primary;
+            width: 84%;
+            background-color: $color-quaternary;
+          }
         }
       }
     }

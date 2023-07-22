@@ -1,0 +1,55 @@
+@import "../../variables.scss";
+@import "../../mixin.scss";
+
+.container {
+  @include center_center;
+  .img_box {
+    .img_background {
+      width: 50vw;
+      height: 770px;
+    }
+  }
+  .container_box_text {
+    @include center_center;
+    color: $color-tertiary;
+    min-width: 50%;
+    padding: 1rem;
+    .text_box {
+      h2 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+      }
+      form {
+        div {
+          label {
+            font-size: 1rem;
+          }
+          input {
+            display: block;
+            outline: none;
+            border: 1px solid #00000062;
+            width: 400px;
+            border-radius: 5px;
+            padding: 8px 13px;
+            margin: 0.3rem 0 1.4rem 0;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            font-size: 1rem;
+          }
+        }
+        .login {
+          @include border_off;
+          cursor: pointer;
+          color: $color-primary;
+          background-color: $color-quaternary;
+          padding: 0.5rem 1.5rem;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          margin-top: 0.5rem;
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}

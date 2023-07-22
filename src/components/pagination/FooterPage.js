@@ -1,6 +1,6 @@
-import styles from "../../styles/layout/Footer.module.scss";
+import styles from "../../styles/pagination/FooterPage.module.scss";
 
-function Footer() {
+function FooterPage() {
   return (
     <footer className={styles.background_color}>
       <div className={styles.container}>
@@ -44,4 +44,4 @@ function Footer() {
   );
 }
 
-export default Footer;
+export default FooterPage;

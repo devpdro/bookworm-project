@@ -1,13 +1,13 @@
 import NavBar from "../components/layout/NavBar";
-import Register from "../components/RegisterPage";
+import RegisterPage from "../components/pagination/RegisterPage";
 
-function Login() {
+function Register() {
   return (
     <main>
       <NavBar />
-      <Register />
+      <RegisterPage />
     </main>
   );
 }
 
-export default Login;
+export default Register;

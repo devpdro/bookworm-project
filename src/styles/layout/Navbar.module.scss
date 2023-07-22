@@ -2,7 +2,7 @@
 @import "../../mixin.scss";
 
 nav {
-  background-color: rgba(35, 33, 35, 0.308);
+  background-color: #00000031;
   .container {
     @include container;
     @include center_between;

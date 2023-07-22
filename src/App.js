@@ -1,3 +1,5 @@
+import React from "react";
+
 import NavBar from "./components/layout/NavBar";
 import Header from "./components/layout/Header";
 import ContainerImg from "./components/layout/ContainerImg";

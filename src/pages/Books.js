@@ -1,15 +1,15 @@
-import HeaderBooks from "../components/HeaderBooks";
+import BookPage from "../components/pagination/BookPage";
 import NavBar from "../components/layout/NavBar";
-import Footer from "../components/layout/Footer"
+import FooterPage from "../components/pagination/FooterPage";
 
 function Books() {
-    return (
-        <main>
-            <NavBar />
-            <HeaderBooks />
-            <Footer />
-        </main>
-    )
+  return (
+    <main>
+      <NavBar />
+      <BookPage />
+      <FooterPage />
+    </main>
+  );
 }
 
 export default Books;
