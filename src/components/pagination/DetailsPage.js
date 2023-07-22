@@ -23,7 +23,9 @@ function DetailsPage() {
           <h5>Descrição: {book.language}</h5>
           <h5>páginas: {book.print_length}</h5>
           <h4>Preço: {book.price}</h4>
-          <input type="submit" value="Adicionar ao carrinho" />
+          <input onClick={() => handleAddToCart(book.id)}>
+            Adicionar ao carrinho
+          </input>
         </div>
       </div>
     </main>

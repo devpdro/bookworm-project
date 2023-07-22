@@ -1,10 +1,14 @@
 import styles from "../../styles/pagination/BookPage.module.scss";
 
+
+
 import { BookData } from "../../BookData";
 import { Link } from "react-router-dom";
 
+
 function BookPage() {
   const firstFifteenBooks = BookData.slice(0, 16);
+
   return (
     <header className={styles.container}>
       <div className={styles.title_box}>

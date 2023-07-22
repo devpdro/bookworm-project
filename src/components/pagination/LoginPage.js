@@ -4,33 +4,43 @@ import Image from "../../assets/auth-bg.jpg";
 
 import React, { useState } from "react";
 
+import { useNavigate } from "react-router-dom";
+
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { auth } from "../../services/firebaseConfig";
 
+import Swal from "sweetalert2";
+
 function LoginPage() {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
 
+  function handleLogin(event) {
+    event.preventDefault(); 
+  }
+
   if (error) {
-    return (
-      <div>
-        <p>Erro: {error.message}</p>
-      </div>
-    );
+    Swal.fire({
+      icon: "error",
+      title: "Ops! Algo deu errado...",
+      text: "senha/e-mail inválido",
+      confirmButtonColor: "#ff6961",
+      confirmButtonText: "OK",
+    });
+    return navigate("/Books");
   }
 
   if (loading) {
-    return <p>Carregando...</p>;
+    <p className={styles.loading}>
+      Carregando...
+    </p>;
   }
 
   if (user) {
-    return (
-      <div>
-        <p>Login efetuado: {user.user.email}</p>
-      </div>
-    );
+    return navigate("/")
   }
 
   return (
@@ -46,7 +56,7 @@ function LoginPage() {
         <div className={styles.text_box}>
           <h2>Conecte-se</h2>
           <p>Entrar com e-mail e senha</p>
-          <form action="">
+          <form onSubmit={handleLogin}>
             <div>
               <label htmlFor="email2">Email:</label>
               <input

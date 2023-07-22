@@ -7,31 +7,43 @@ import React, { useState } from "react";
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { auth } from "../../services/firebaseConfig";
 
+import Swal from "sweetalert2";
+
+import { useNavigate } from "react-router-dom";
+
 function RegisterPage() {
+  const navigate = useNavigate();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth);
 
+  function handleLogin(event) {
+    event.preventDefault();
+  }
+
   if (error) {
-    return (
-      <div>
-        <p>Erro: {error.message}</p>
-      </div>
-    );
+    Swal.fire({
+      icon: "error",
+      title: "Ops! Algo deu errado...",
+      text: "senha/e-mail inválido",
+      confirmButtonColor: "#ff6961  ",
+      confirmButtonText: "OK",
+    });
+    return navigate("/Books");
   }
 
   if (loading) {
-    return <p>Carregando...</p>;
+    return (
+      <p className={styles.loading}>
+        Carregando...
+      </p>
+    );
   }
 
   if (user) {
-    return (
-      <div>
-        <p>Cadastro feito: {user.user.email}</p>
-      </div>
-    );
+    return navigate("/");
   }
 
   return (
@@ -43,7 +55,7 @@ function RegisterPage() {
         <div className={styles.text_box}>
           <h2>Cadastrar-se</h2>
           <p>Crie uma nova conta com e-mail e senha</p>
-          <form>
+          <form onSubmit={handleLogin}>
             <div>
               <label htmlFor="username1">Nome de usuário:</label>
               <input
