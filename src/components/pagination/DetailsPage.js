@@ -9,18 +9,21 @@ function DetailsPage() {
   const { id } = useParams();
 
   const book = BookData.find((book) => book.id === parseInt(id));
-  
+
   return (
     <main className={styles.container}>
       <div className={styles.box}>
-        <div>
+        <div className={styles.img_box}>
           <img src={book.book_url} alt="Imagem do livro" />
         </div>
-        <div>
+        <div className={styles.box_text}>
           <h2>{book.book_name}</h2>
-          <p>Autor: {book.author_name}</p>
-          <p>Descrição: {book.book_description}</p>
-          <p>Preço: {book.price}</p>
+          <h6>Autor: {book.author_name}</h6>
+          <p>{book.book_description}</p>
+          <h5>Descrição: {book.language}</h5>
+          <h5>páginas: {book.print_length}</h5>
+          <h4>Preço: {book.price}</h4>
+          <input type="submit" value="Adicionar ao carrinho" />
         </div>
       </div>
     </main>

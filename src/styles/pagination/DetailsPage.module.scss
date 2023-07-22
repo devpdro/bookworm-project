@@ -1,12 +1,50 @@
 @import "../../variables.scss";
 @import "../../mixin.scss";
 
-
 .container {
-    @include container;
-    .box {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+  @include container;
+  .box {
+    @include center_center;
+    margin: 11rem 0 12rem 0;
+    .img_box {
+      img {
+        width: 400px;
+        height: 400px;
+      }
     }
+    .box_text {
+      margin-left: 5rem;
+      max-width: 600px;
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 0.7rem;
+      }
+      h6 {
+        font-size: 1rem;
+        margin-bottom: 1.2rem;
+        color: $color-secondary;
+      }
+      p {
+        margin-bottom: 1.2rem;
+      }
+      h5 {
+        font-size: 1rem;
+        margin-bottom: 1.1rem;
+      }
+      h4 {
+        color: $color-quaternary;
+        font-size: 1.3rem;
+        margin-bottom: 1.9rem;
+      }
+      input {
+        @include border_off;
+        cursor: pointer;
+        padding: 0.5rem 1.2rem;
+        font-size: 1rem;
+        color: $color-primary;
+        width: 40%;
+        background-color: $color-quaternary;
+      }
+    }
+  }
 }
