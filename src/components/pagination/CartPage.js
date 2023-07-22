@@ -13,7 +13,7 @@ function CartPage() {
     localStorage.setItem(
       "total",
       JSON.stringify(calculateTotalPrice(updatedCart))
-    ); // Atualiza o valor total ao remover itens
+    );
     window.location.reload();
   };
 

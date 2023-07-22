@@ -6,9 +6,20 @@ function PaymentForm() {
   const [loaded, setLoaded] = useState(false);
   let paypalRef = useRef();
 
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  const calculateTotalPrice = (cart) => {
+    return cart.reduce(
+      (total, book) => total + book.price * book.quantidade,
+      0
+    );
+  };
+
+  const total = calculateTotalPrice(cart);
+
   const product = {
-    price: "15.78",
-    description: "Curso react",
+    price: `${total}`,
+    description: "Comprar livro(s)",
   };
 
   useEffect(() => {
@@ -56,7 +67,7 @@ function PaymentForm() {
     <div className={styles.container}>
       {paid ? (
         <div>
-          <h1>Parabens voce comprou o curso</h1>
+          <h1>Parabens pela compra!</h1>
         </div>
       ) : (
         <>

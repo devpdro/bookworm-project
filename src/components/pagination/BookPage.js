@@ -1,10 +1,24 @@
+import React, { useState, useEffect } from "react";
 import styles from "../../styles/pagination/BookPage.module.scss";
-
 import { BookData } from "../../BookData";
 import { Link } from "react-router-dom";
 
 function BookPage() {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [filteredBooks, setFilteredBooks] = useState([]);
+
   const firstFifteenBooks = BookData.slice(0, 16);
+
+  const handleSearch = (event) => {
+    setSearchTerm(event.target.value);
+  };
+
+  useEffect(() => {
+    const filtered = firstFifteenBooks.filter((book) =>
+      book.book_name.toLowerCase().includes(searchTerm.toLowerCase())
+    );
+    setFilteredBooks(filtered);
+  }, [searchTerm, firstFifteenBooks]);
 
   return (
     <header className={styles.container}>
@@ -19,11 +33,13 @@ function BookPage() {
             name="book"
             id="book1"
             placeholder="Pesquisar livros"
+            value={searchTerm}
+            onChange={handleSearch}
           />
         </div>
       </div>
       <div className={styles.books_box_container}>
-        {firstFifteenBooks.map((book) => (
+        {filteredBooks.map((book) => (
           <div className={styles.books_box} key={book.id}>
             <div className={styles.img_box}>
               <img src={book.book_url} alt="Imagem do livro" />

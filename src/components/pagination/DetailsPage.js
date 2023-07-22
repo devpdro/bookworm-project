@@ -19,21 +19,18 @@ function DetailsPage() {
       const existingBook = cart.find((item) => item.id === book.id);
 
       if (existingBook) {
-        // Se o livro já existe no carrinho, aumenta a quantidade
         existingBook.quantidade += 1;
       } else {
-        // Se o livro não existe no carrinho, adiciona com quantidade 1
         cart.push({ ...book, quantidade: 1 });
       }
 
-      // Calcula o valor total do carrinho após adicionar o livro
       const total = cart.reduce(
         (sum, item) => sum + item.price * item.quantidade,
         0
       );
 
       localStorage.setItem("cart", JSON.stringify(cart));
-      localStorage.setItem("total", JSON.stringify(total)); // Armazena o valor total no localStorage
+      localStorage.setItem("total", JSON.stringify(total));
       Swal.fire({
         icon: "success",
         title: "Sucesso!",
