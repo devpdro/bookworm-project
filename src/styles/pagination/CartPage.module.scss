@@ -62,22 +62,11 @@
       }
     }
     .total {
+      margin-top: 5rem;
       margin-bottom: 5rem;
       h1 {
         font-size: 2rem;
         margin-bottom: 1rem;
-      }
-      button {
-        @include border_off;
-        @include transition;
-        padding: 0.5rem 1.2rem;
-        font-size: 1.3rem;
-        color: $color-primary;
-        width: 18%;
-        background-color: $color-quaternary;
-        &:hover {
-          background-color: $color-quinary;
-        }
       }
     }
   }

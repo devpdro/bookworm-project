@@ -1,5 +1,8 @@
 import React from "react";
+
 import styles from "../../styles/pagination/CartPage.module.scss";
+
+import PaymentForm from "../PaymentForm";
 
 function CartPage() {
   const cart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -55,7 +58,7 @@ function CartPage() {
         ))}
         <div className={styles.total}>
           <h1>Valor Total: {total.toFixed(2)}</h1>
-          <button type="submit">Pagar agora</button>
+          <PaymentForm />
         </div>
       </div>
     </main>
