@@ -1,24 +1,28 @@
 import React from "react";
 
+import { useState } from "react";
+
 import NavBar from "./components/layout/NavBar";
 import Header from "./components/layout/Header";
 import ContainerImg from "./components/layout/ContainerImg";
 import Book from "./components/Book";
 import Footer from "./components/layout/Footer";
 
-import { NotificationContainer } from "react-notifications";
-import "react-notifications/lib/notifications.css";
-
 function App() {
+  const [searchTerm, setSearchTerm] = useState("");
+
+  const handleSearch = (term) => {
+    setSearchTerm(term);
+  };
+
   return (
     <main>
       <ContainerImg>
         <NavBar />
-        <Header />
+        <Header onSearch={handleSearch} />
       </ContainerImg>
-      <Book />
+      <Book searchTerm={searchTerm} />
       <Footer />
-      <NotificationContainer />
     </main>
   );
 }

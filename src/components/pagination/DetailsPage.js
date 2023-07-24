@@ -61,7 +61,7 @@ function DetailsPage() {
           <p>{book.book_description}</p>
           <h5>Descrição: {book.language}</h5>
           <h5>Páginas: {book.print_length}</h5>
-          <h4>Preço: {book.price}</h4>
+          <h4>Preço: R$ {book.price}</h4>
           <button onClick={addToCart}>Adicionar ao carrinho</button>
         </div>
       </div>

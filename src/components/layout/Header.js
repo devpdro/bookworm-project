@@ -1,6 +1,12 @@
+import React from "react";
 import styles from "../../styles/layout/Header.module.scss";
 
-function Header() {
+function Header({ onSearch }) {
+  const handleInputChange = (event) => {
+    const searchTerm = event.target.value;
+    onSearch(searchTerm);
+  };
+
   return (
     <header>
       <div className={styles.box_container}>
@@ -11,12 +17,12 @@ function Header() {
           <p>Compre livros de qualidade a um preço mais barato</p>
         </div>
         <div className={styles.input_box}>
-          <label htmlFor="book1">Search</label>
           <input
             type="text"
             name="book"
             id="book1"
             placeholder="Pesquisar livros"
+            onChange={handleInputChange}
           />
         </div>
       </div>

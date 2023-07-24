@@ -27,7 +27,6 @@ function BookPage() {
           Encontre os <span>Livros</span> que deseja
         </h1>
         <div className={styles.input_box}>
-          <label htmlFor="book1">Search</label>
           <input
             type="text"
             name="book"
@@ -47,7 +46,7 @@ function BookPage() {
             <div className={styles.text_box}>
               <h2>{book.book_name}</h2>
               <p>{book.author_name}</p>
-              <h4>Preço</h4>
+              <h4>R$ {book.price}</h4>
               <Link to={`/Details/${book.id}`}>
                 <input type="submit" value="Ver mais" />
               </Link>

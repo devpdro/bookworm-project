@@ -47,9 +47,9 @@ function CartPage() {
             <div className={styles.text_box}>
               <h2>{book.book_name}</h2>
               <h4>{book.author_name}</h4>
-              <p>Preço: {book.price}</p>
+              <p>Preço: R$ {book.price}</p>
               <p>Quantidade: {book.quantidade}</p>
-              <p>Subtotal: {(book.price * book.quantidade).toFixed(2)}</p>
+              <p>Subtotal: R$ {(book.price * book.quantidade).toFixed(2)}</p>
               <button onClick={() => removeFromCart(book.id)}>
                 Remover do carrinho
               </button>
@@ -57,7 +57,7 @@ function CartPage() {
           </div>
         ))}
         <div className={styles.total}>
-          <h1>Valor Total: {total.toFixed(2)}</h1>
+          <h1>Valor Total: R$ {total.toFixed(2)}</h1>
           <PaymentForm />
         </div>
       </div>

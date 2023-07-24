@@ -23,16 +23,6 @@ header {
     .input_box {
       @include center_grid;
       position: relative;
-      label {
-        cursor: pointer;
-        position: absolute;
-        top: 8px;
-        right: 30px;
-        background-color: $color-secondary;
-        padding: 7px 15px;
-        color: $color-primary;
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-      }
       input {
         @include border_off;
         background-color: $color-primary;
