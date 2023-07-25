@@ -1,8 +1,8 @@
+import React, { useState, useEffect } from "react";
+
 import styles from "../../styles/pagination/LoginPage.module.scss";
 
 import Image from "../../assets/auth-bg.jpg";
-
-import React, { useState } from "react";
 
 import { useNavigate } from "react-router-dom";
 
@@ -17,6 +17,13 @@ function LoginPage() {
   const [password, setPassword] = useState("");
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
+
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, []);
 
   function handleLogin(event) {
     event.preventDefault();

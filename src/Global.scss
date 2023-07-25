@@ -1,3 +1,5 @@
+@import "./mixin.scss";
+
 @import url(https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap);
 
 * {
@@ -15,4 +17,13 @@
 
 .no-scroll {
   overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #fa7728;
+  height: 20px;
 }

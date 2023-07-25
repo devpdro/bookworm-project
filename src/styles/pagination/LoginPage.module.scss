@@ -41,13 +41,16 @@
         }
         .login {
           @include border_off;
-          cursor: pointer;
+          @include transition;
           color: $color-primary;
           background-color: $color-quaternary;
           padding: 0.5rem 1.5rem;
           box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
           margin-top: 0.5rem;
           font-size: 1.2rem;
+          &:hover {
+            background-color: $color-quinary;
+          }
         }
       }
     }

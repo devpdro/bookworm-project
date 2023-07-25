@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from "react";
+
 import styles from "../styles/Book.module.scss";
+
 import { BookData } from "../BookData";
+
 import { Link } from "react-router-dom";
 
 function Book({ searchTerm }) {

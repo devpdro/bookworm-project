@@ -5,7 +5,6 @@
   background-color: $color-quaternary;
 }
 nav {
-  background-color: #00000031;
   .container {
     @include container;
     @include center_between;

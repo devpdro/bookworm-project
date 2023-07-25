@@ -9,7 +9,7 @@ import { auth } from "../../services/firebaseConfig";
 
 import Swal from "sweetalert2";
 
-function NavBar() {
+function NavBar({ isHomePage }) {
   const [user] = useAuthState(auth);
 
   const handleLogout = () => {
@@ -27,8 +27,16 @@ function NavBar() {
     });
   };
 
+  const navbarStyle = isHomePage
+    ? {
+        background: "transparent",
+      }
+    : {
+        background: "linear-gradient(to bottom, #232123 0%, transparent 100%)",
+      };
+
   return (
-    <nav>
+    <nav style={navbarStyle}>
       <div className={styles.container}>
         <div className={styles.title_box}>
           <Link to="/">
@@ -39,7 +47,7 @@ function NavBar() {
         </div>
         <ul>
           <li>
-            <Link to="/">Inicio</Link>
+            <Link to="/">Início</Link>
           </li>
           <li>
             <Link to="/books">Livros</Link>
@@ -47,7 +55,7 @@ function NavBar() {
           {user ? (
             <li>
               <Link onClick={handleLogout}>Sair</Link>
-              <Link to="/Cart">
+              <Link to="/Cart" s>
                 <BiShoppingBag className={styles.icon} />
               </Link>
             </li>

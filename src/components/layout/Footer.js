@@ -1,7 +1,8 @@
+import React from "react";
+
 import styles from "../../styles/layout/Footer.module.scss";
 
 import emailjs from "emailjs-com";
-import React from "react";
 
 import Swal from "sweetalert2";
 

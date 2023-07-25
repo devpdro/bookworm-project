@@ -1,4 +1,5 @@
 import React from "react";
+
 import styles from "../../styles/layout/Header.module.scss";
 
 function Header({ onSearch }) {

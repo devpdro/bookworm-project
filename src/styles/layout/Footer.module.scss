@@ -31,12 +31,15 @@
     .submit {
       input {
         @include border_off;
-        cursor: pointer;
+        @include transition;
         color: $color-primary;
-        background-color: #fb995d;
+        background-color: $color-secondary;
         padding: 0.7rem 1.8rem;
         margin-top: 1.1rem;
         font-size: 1.2rem;
+        &:hover {
+          background-color: $color-quaternary;
+        }
       }
     }
   }

@@ -18,7 +18,7 @@ function App() {
   return (
     <main>
       <ContainerImg>
-        <NavBar />
+        <NavBar isHomePage={true} />
         <Header onSearch={handleSearch} />
       </ContainerImg>
       <Book searchTerm={searchTerm} />

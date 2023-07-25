@@ -1,15 +1,15 @@
+import React, { useState, useEffect } from "react";
+
 import styles from "../../styles/pagination/RegisterPage.module.scss";
 
 import Image from "../../assets/auth-bg.jpg";
 
-import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import { useCreateUserWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { auth } from "../../services/firebaseConfig";
 
 import Swal from "sweetalert2";
-
-import { useNavigate } from "react-router-dom";
 
 function RegisterPage() {
   const navigate = useNavigate();
@@ -18,6 +18,13 @@ function RegisterPage() {
   const [password, setPassword] = useState("");
   const [createUserWithEmailAndPassword, user, loading, error] =
     useCreateUserWithEmailAndPassword(auth);
+
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, []);
 
   function handleLogin(event) {
     event.preventDefault();

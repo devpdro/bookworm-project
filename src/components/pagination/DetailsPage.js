@@ -1,9 +1,14 @@
 import React from "react";
+
 import styles from "../../styles/pagination/DetailsPage.module.scss";
+
 import { useParams, useNavigate } from "react-router-dom";
+
 import { BookData } from "../../BookData";
+
 import { useAuthState } from "react-firebase-hooks/auth";
 import { auth } from "../../services/firebaseConfig";
+
 import Swal from "sweetalert2";
 
 function DetailsPage() {

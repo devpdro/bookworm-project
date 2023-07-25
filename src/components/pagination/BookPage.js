@@ -1,13 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
+
 import styles from "../../styles/pagination/BookPage.module.scss";
+
 import { BookData } from "../../BookData";
+
 import { Link } from "react-router-dom";
 
 function BookPage() {
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredBooks, setFilteredBooks] = useState([]);
 
-  const firstFifteenBooks = BookData.slice(0, 16);
+  const firstFifteenBooks = useMemo(() => BookData.slice(0, 16), []);
 
   const handleSearch = (event) => {
     setSearchTerm(event.target.value);
