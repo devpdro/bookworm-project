@@ -13,13 +13,15 @@ function Book({ searchTerm }) {
     setFilteredBooks(filtered);
   }, [searchTerm]);
 
+  const firstFourBooks = filteredBooks.slice(0, 4);
+
   return (
     <section>
       <h1 className={styles.title}>
         Aqui estão alguns <span>livros</span> que você pode gostar
       </h1>
       <div className={styles.books_box_container}>
-        {filteredBooks.map((book) => (
+        {firstFourBooks.map((book) => (
           <div className={styles.books_box} key={book.id}>
             <div className={styles.img_box}>
               <img src={book.book_url} alt="Imagem do livro" />

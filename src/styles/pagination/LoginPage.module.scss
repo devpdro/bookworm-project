@@ -4,9 +4,10 @@
 .container {
   @include center_center;
   .img_box {
+ 
     .img_background {
       width: 50vw;
-      height: 770px;
+      height: 100vh;
     }
   }
   .container_box_text {

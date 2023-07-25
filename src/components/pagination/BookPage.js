@@ -1,27 +1,22 @@
-import React, { useState, useEffect, useMemo } from "react";
-
+import React, { useState, useEffect } from "react";
 import styles from "../../styles/pagination/BookPage.module.scss";
-
 import { BookData } from "../../BookData";
-
 import { Link } from "react-router-dom";
 
 function BookPage() {
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredBooks, setFilteredBooks] = useState([]);
 
-  const firstFifteenBooks = useMemo(() => BookData.slice(0, 16), []);
-
   const handleSearch = (event) => {
     setSearchTerm(event.target.value);
   };
 
   useEffect(() => {
-    const filtered = firstFifteenBooks.filter((book) =>
+    const filtered = BookData.slice(0, 16).filter((book) =>
       book.book_name.toLowerCase().includes(searchTerm.toLowerCase())
     );
     setFilteredBooks(filtered);
-  }, [searchTerm, firstFifteenBooks]);
+  }, [searchTerm]);
 
   return (
     <header className={styles.container}>
