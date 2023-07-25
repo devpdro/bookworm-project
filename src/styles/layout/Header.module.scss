@@ -2,6 +2,7 @@
 @import "../../mixin.scss";
 
 header {
+  padding: 0 1rem;
   @include center_grid;
   border-bottom: 1px solid #00000028;
   height: 800px;
@@ -27,9 +28,10 @@ header {
         @include border_off;
         background-color: $color-primary;
         font-size: 1.1rem;
-        width: 30vw;
+        min-width: 10vw;
+        max-width: 40vw;
         height: 7vh;
-        padding-left: 1.5rem;
+        padding: 0 1rem;
         color: $color-tertiary;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
       }

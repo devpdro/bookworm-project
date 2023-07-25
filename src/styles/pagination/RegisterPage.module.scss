@@ -57,7 +57,20 @@
   }
 }
 .loading {
-  display: grid;
-  place-items: center;
+  @include center_grid;
   font-size: 4rem;
+  padding: 0 1rem;
+}
+.wait {
+  @include center_grid;
+  font-size: 2rem;
+}
+@media (max-width: 967px) {
+  .container {
+    .img_box {
+      img {
+        display: none;
+      }
+    }
+  }
 }

@@ -6,6 +6,7 @@
   padding-bottom: 5rem;
   .container {
     @include container;
+    padding: 0 1.5rem;
     .title {
       padding-top: 3.7rem;
       margin-bottom: 3.3rem;
@@ -19,7 +20,8 @@
       input {
         @include border_off;
         display: block;
-        width: 40%;
+        min-width: 30%;
+        max-width: 90%;
         background-color: $color-primary;
         color: $color-tertiary;
         padding: 15px;

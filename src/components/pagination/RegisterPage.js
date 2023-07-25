@@ -42,7 +42,12 @@ function RegisterPage() {
   }
 
   if (loading) {
-    return <p className={styles.loading}>Carregando...</p>;
+    return (
+      <div>
+        <p className={styles.loading}>Carregando...</p>
+        <p className={styles.wait}>Aguarde</p>
+      </div>
+    );
   }
 
   if (user) {

@@ -3,6 +3,7 @@
 
 .container {
   @include container;
+  padding: 0 1.5rem;
   .box {
     @include center_center;
     margin: 11rem 0 12rem 0;
@@ -13,7 +14,7 @@
       }
     }
     .box_text {
-      margin-left: 5rem;
+      margin-left: 3rem;
       max-width: 600px;
       h2 {
         font-size: 2rem;
@@ -26,6 +27,7 @@
       }
       p {
         margin-bottom: 1.2rem;
+        text-align: justify;
       }
       h5 {
         font-size: 1rem;
@@ -47,6 +49,26 @@
         &:hover {
           background-color: $color-quinary;
         }
+      }
+    }
+  }
+}
+@media (max-width: 967px) {
+  .container {
+    .box {
+      flex-direction: column;
+      .img_box {
+        img {
+          padding: 1rem;
+          width: 350px;
+          height: 400px;
+        }
+      }
+      .box_text {
+        margin-left: 0rem;
+        max-width: 600px;
+        text-align: center;
+        padding: 0 1.5rem;
       }
     }
   }

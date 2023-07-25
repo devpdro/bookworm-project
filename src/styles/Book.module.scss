@@ -5,6 +5,7 @@ section {
   @include container;
   margin-bottom: 5.8rem;
   .title {
+    padding: 0rem 1.2rem;
     margin: 4rem 0 4rem 1rem;
     span {
       color: $color-secondary;

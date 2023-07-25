@@ -62,7 +62,9 @@ function NavBar({ isHomePage }) {
           ) : (
             <li>
               <Link to="/login">Conectar</Link>
-              <Link to="/Register">Cadastrar-se</Link>
+              <Link className={styles.margin} to="/Register">
+                Cadastrar
+              </Link>
             </li>
           )}
         </ul>

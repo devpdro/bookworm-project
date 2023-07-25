@@ -5,9 +5,11 @@
   background-color: $color-quaternary;
 }
 nav {
+  overflow-x: hidden;
   .container {
     @include container;
     @include center_between;
+    padding: 0 1rem;
     .title_box {
       font-size: 1.4rem;
       a {
@@ -31,6 +33,47 @@ nav {
           text-decoration: none;
           font-size: 1.2rem;
           margin-left: 1.1rem;
+          color: $color-primary;
+          &:hover {
+            color: $color-secondary;
+          }
+          .icon {
+            margin-top: 0.2rem;
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 667px) {
+  .container {
+    @include container;
+    @include center_between;
+    padding: 0 1.5rem;
+    .title_box {
+      font-size: 1.2rem !important;
+      a {
+        text-decoration: none;
+        h1 {
+          margin: 0.7rem 0 0.7rem 0;
+          color: $color-primary;
+          span {
+            color: $color-secondary;
+          }
+        }
+      }
+    }
+    ul {
+      display: flex;
+      li {
+        list-style: none;
+        @include center_center;
+        a {
+          @include transition;
+          text-decoration: none;
+          font-size: 1rem !important;
+          margin-left: 0.8rem !important;
           color: $color-primary;
           &:hover {
             color: $color-secondary;

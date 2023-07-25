@@ -1,21 +1,17 @@
 import React, { useState, useEffect } from "react";
-
 import styles from "../styles/Book.module.scss";
-
 import { BookData } from "../BookData";
-
 import { Link } from "react-router-dom";
 
 function Book({ searchTerm }) {
   const [filteredBooks, setFilteredBooks] = useState([]);
-  const firstFifteenBooks = BookData.slice(0, 4);
 
   useEffect(() => {
-    const filtered = firstFifteenBooks.filter((book) =>
+    const filtered = BookData.filter((book) =>
       book.book_name.toLowerCase().includes(searchTerm.toLowerCase())
     );
     setFilteredBooks(filtered);
-  }, [searchTerm, firstFifteenBooks]);
+  }, [searchTerm]);
 
   return (
     <section>
