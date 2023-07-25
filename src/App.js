@@ -2,6 +2,8 @@ import React from "react";
 
 import { useState } from "react";
 
+import { Helmet } from "react-helmet";
+
 import NavBar from "./components/layout/NavBar";
 import Header from "./components/layout/Header";
 import ContainerImg from "./components/layout/ContainerImg";
@@ -16,14 +18,17 @@ function App() {
   };
 
   return (
-    <main>
+    <>
+      <Helmet>
+        <title>Bookworm</title>
+      </Helmet>
       <ContainerImg>
         <NavBar isHomePage={true} />
         <Header onSearch={handleSearch} />
       </ContainerImg>
       <Book searchTerm={searchTerm} />
       <Footer />
-    </main>
+    </>
   );
 }
 
