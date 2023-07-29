@@ -1,70 +1,74 @@
-# Getting Started with Create React App
+# Bookworm 📚
+![Alt text](src/assets/readme/bookworm.png)
+You can access it with this [link.](https://ecommerce-project-livid-chi.vercel.app/)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 💻 About the project 
+The project consists of an E-commerce for Books, providing users with a friendly and intuitive experience to browse the store, register, add items to the cart and complete their purchases.
 
-## Available Scripts
+# ⏫ Some features worth highlighting
 
-In the project directory, you can run:
+- User registration and authentication system using Firebase Authentication. Users can create an account, log in and access restricted areas of the website.
+- Shopping cart allowing users to add books and track quantity and total price of selected items before checking out.
+- Search bar that allows users to search for specific books in the store. The implementation of this search feature makes the user experience more agile and efficient, facilitating the location of desired books among the virtual store's catalog.
+- PayPal API integration in the checkout process.
+- Sending an email on the form with validation.
 
-### `npm start`
+# 🚀 Technologies 
+Bookworm was developed using the following technologies:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- SCSS
+- React.js
+- JavaScript
+- Vercel
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# 🔨 Used libraries 
 
-### `npm test`
+- React Icons
+- Sweetalert2
+- React-router
+- React-helmet
+- Emailjs-com
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# 🛠️ How to install the project on your machine
+To install and run the project, follow the steps below:
 
-### `npm run build`
+<h3>Before you begin, make sure you have the following tools installed on your system:</h3>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Node.js (version 14 or higher)
+- NPM (Node Package Manager) ou Yarn
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<h3>Step 1: Clone the repository</h3> 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Clone this repository to your local environment:
 
-### `npm run eject`
+```bash
+git clone https://github.com/devpdro/bookworm-project.git
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<h3>Step 2: Install dependencies</h3> 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Navigate to the project directory:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+cd bookworm-project
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Install the project's dependencies:
 
-## Learn More
+```bash
+npm install
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<h3>Step 3: Run the project</h3> 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Start the development server:
 
-### Code Splitting
+```bash
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- This will start the local server and provide a URL to view the project in your browser.
+  
+```bash
+Local: http://localhost:3000
+```
