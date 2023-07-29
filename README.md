@@ -19,7 +19,8 @@ Bookworm was developed using the following technologies:
 - SCSS
 - React.js
 - JavaScript
-- Vercel
+- Firebase (for authentication service)
+- Vercel (hosting platform)
 
 # 🔨 Used libraries 
 
